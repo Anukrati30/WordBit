@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulary Flashcard App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🎯 Vocabulary Flashcards</h1>
+    <div class="nav">
+      <button class="nav-btn active" onclick="showSection('add')">Add Words</button>
+      <button class="nav-btn" onclick="showSection('study')">Study</button>
+      <button class="nav-btn" onclick="showSection('stats')">Statistics</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- Add Words Section -->
+    <div id="add" class="section active">
+      <div class="success-message" id="successMessage">
+        Word added successfully! 🎉
+      </div>
+      
+      <div class="error-message" id="errorMessage">
+        This word already exists in your vocabulary! 📚
+      </div>
+      
+      <form id="addWordForm">
+        <div class="form-group">
+          <label for="word">Word</label>
+          <input type="text" id="word" required placeholder="Enter the word">
+        </div>
+        
+        <div class="form-group">
+          <label for="example">Example Sentence</label>
+          <textarea id="example" placeholder="Write a sentence using this word..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="meaning">Meaning</label>
+          <textarea id="meaning" required placeholder="Meaning of this word..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Word</button>
+      </form>
+    </div>
+
+    <!-- Study Section -->
+    <div id="study" class="section">
+      <div id="flashcardContainer">
+        <div class="no-words" id="noWordsMessage">
+          No words added yet. Add some words first! 📚
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div id="stats" class="section">
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number" id="totalWords">0</div>
+          <div class="stat-label">Total Words</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="studySession">0</div>
+          <div class="stat-label">Cards This Session</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
