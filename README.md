@@ -1,4 +1,4 @@
-# Personal_Dictionary
+# WordBit
 📝 Project Summary: Personal Dictionary Web App
 A full-stack web application that allows users to build and manage their own personalized dictionary by adding words along with their meanings, example sentences, and pronunciation support.
 
