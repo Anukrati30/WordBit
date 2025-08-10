@@ -5,11 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vocabulary Flashcard App</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
+  
+    <img src="27175489_lwdh_xaf6_220505.svg" class="tree">
+    <img src="Totoro-removebg-preview.png" class="totoro">
+  
+  
 <div class="container">
   <div class="header">
-    <h1>🎯 Vocabulary Flashcards</h1>
+    <h1>WordBit</h1>
     <div class="nav">
       <button class="nav-btn active" onclick="showSection('add')">Add Words</button>
       <button class="nav-btn" onclick="showSection('study')">Study</button>
@@ -21,11 +27,11 @@
     <!-- Add Words Section -->
     <div id="add" class="section active">
       <div class="success-message" id="successMessage">
-        Word added successfully! 🎉
+        Word added successfully!🎉
       </div>
       
       <div class="error-message" id="errorMessage">
-        This word already exists in your vocabulary! 📚
+        This word already exists in your vocabulary!📚
       </div>
       
       <form id="addWordForm">
@@ -35,13 +41,13 @@
         </div>
         
         <div class="form-group">
-          <label for="example">Example Sentence</label>
-          <textarea id="example" placeholder="Write a sentence using this word..."></textarea>
+          <label for="meaning">Meaning</label>
+          <textarea id="meaning" required placeholder="Meaning of this word..."></textarea>
         </div>
 
         <div class="form-group">
-          <label for="meaning">Meaning</label>
-          <textarea id="meaning" required placeholder="Meaning of this word..."></textarea>
+          <label for="example">Example Sentence</label>
+          <textarea id="example" placeholder="Write a sentence using this word..."></textarea>
         </div>
         
         <button type="submit" class="btn btn-primary">Add Word</button>
@@ -52,7 +58,7 @@
     <div id="study" class="section">
       <div id="flashcardContainer">
         <div class="no-words" id="noWordsMessage">
-          No words added yet. Add some words first! 📚
+          No words added yet. Add some words first! 📖
         </div>
       </div>
     </div>
@@ -73,6 +79,8 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
